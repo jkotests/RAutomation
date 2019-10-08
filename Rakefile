@@ -14,9 +14,9 @@ end
 
 namespace :build do
   build_tasks = [
-    {:name => :uia_dll, :path => "UiaDll", :ext => "dll"},
-    {:name => :i_accessible_dll, :path => "IAccessibleDLL", :ext => "dll"},
-    {:name => :windows_forms, :path => "WindowsForms", :ext => "exe"}
+    #~ {:name => :uia_dll, :path => "UiaDll", :ext => "dll"},
+    #~ {:name => :i_accessible_dll, :path => "IAccessibleDLL", :ext => "dll"},
+    #~ {:name => :windows_forms, :path => "WindowsForms", :ext => "exe"}
   ]
 
   build_tasks.each do |build_task|
@@ -46,7 +46,7 @@ namespace :spec do
       puts "Running specs for adapter: #{adapter}"
       task = Rake::Task["spec"]
       task.reenable
-      task.invoke      
+      task.invoke
     end
   end
 
